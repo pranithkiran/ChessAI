@@ -7,12 +7,15 @@ simplified logic is used: If for the last eight moves no capture, promotions, or
 using the search algorithm specified in the below assignment grid. Never try to modify the member variables of any of the provided AI framework classes, they
 should be considered read only. You need to represent the state of the board using YOUR OWN data-structures.
 
-Further documentation regarding the AI-framework is available at the following
-link, [http://docs.siggame.io/chess]
-● C++: [http://siggame.github.io/Joueur.cpp/namespacecpp__client_1_1chess.html]
-● C# : [http://siggame.github.io/Joueur.cs/games/Joueur.cs.Games.Chess.html]
-● Python : [http://siggame.github.io/Joueur.py/chess/index.html]
-● Java : [http://siggame.github.io/Joueur.java/#] (Packages > games.chess)
+Further documentation regarding the AI-framework is available at the following link, [http://docs.siggame.io/chess]
+
+C++: [http://siggame.github.io/Joueur.cpp/namespacecpp__client_1_1chess.html]
+
+C# : [http://siggame.github.io/Joueur.cs/games/Joueur.cs.Games.Chess.html]
+
+Python : [http://siggame.github.io/Joueur.py/chess/index.html]
+
+Java : [http://siggame.github.io/Joueur.java/#] (Packages > games.chess)
 
 **Output:**
 On each turn, output the move chosen by your AI program in standard chess notation [https://en.wikipedia.org/wiki/Algebraic_notation_(chess)] with any necessary additional information needed to describe the move. Your program may need to translate the starting and ending square of the move into standard chess notation in order to output in the correct format.
@@ -21,17 +24,10 @@ Note also that you must support arbitrary initial states in Forsyth-Edwards Nota
 Assignment Algorithm
 1 Legal random move.
 
-2 Iterative-Deepening
-Depth-Limited MiniMax
+2 Iterative-Deepening, Depth-Limited MiniMax
 
 3 Time-Limited
-Iterative-Deepening
-Depth-Limited MiniMax
-with Alpha-Beta Pruning.
+Iterative-Deepening, Depth-Limited MiniMax, with Alpha-Beta Pruning.
 
 4 Time-Limited
-Iterative-Deepening
-Depth-Limited MiniMax
-with Alpha-Beta Pruning,
-Quiescent Search, and
-History Table
+Iterative-Deepening, Depth-Limited MiniMax, with Alpha-Beta Pruning, Quiescent Search, and History Table
