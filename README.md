@@ -1,43 +1,37 @@
-#################################
-#	Coding Standards	#
-#################################
+**Game Assignment Set : Chess**
 
-You can use any of the following programming languages for your submission : 
-	- C++
-	- C#
-	- Java
-	- Python3 (NOT Python2)
-Your code must be well formatted and styled according to good coding standards, such as the MST coding standard outlined here : 
-http://web.mst.edu/~cpp/cpp_coding_standard_v1_1.pdf
-It is required that your code is well documented.
+**Introduccion**
+The game this semester is Chess. The rules and objective for Chess are, except for the here noted exception, as contained on Wikipedia’s following page:
+[http://en.wikipedia.org/wiki/Rules_of_chess] The one exception we will use is that instead of the official three board state repetition draw rule, the following
+simplified logic is used: If for the last eight moves no capture, promotions, or pawn movement has happened and moves 0,1,2, and 3 are identical to moves 4, 5, 6, and 7 respectively, then a draw has occurred. Two moves are identical if the starting position (rank and file) and ending position (rank and file) of the moves are identical. To complete the game project assignments, you need to fill in the make_move() function of the AI class in the provided AI framework template to implement an AI player for Chess in either C++, C#, Java, or Python 3. Upon each call of the make_move() function, your AI player shall make the best legal move it can find
+using the search algorithm specified in the below assignment grid. Never try to modify the member variables of any of the provided AI framework classes, they
+should be considered read only. You need to represent the state of the board using YOUR OWN data-structures.
 
-NOTE : Sloppy, undocumented, or otherwise unreadable code will be penalized for not following good coding standards (as laid out in the grading rubric on the assignment document) 
+Further documentation regarding the AI-framework is available at the following
+link, [http://docs.siggame.io/chess]
+● C++: [http://siggame.github.io/Joueur.cpp/namespacecpp__client_1_1chess.html]
+● C# : [http://siggame.github.io/Joueur.cs/games/Joueur.cs.Games.Chess.html]
+● Python : [http://siggame.github.io/Joueur.py/chess/index.html]
+● Java : [http://siggame.github.io/Joueur.java/#] (Packages > games.chess)
 
+**Output:**
+On each turn, output the move chosen by your AI program in standard chess notation [https://en.wikipedia.org/wiki/Algebraic_notation_(chess)] with any necessary additional information needed to describe the move. Your program may need to translate the starting and ending square of the move into standard chess notation in order to output in the correct format.
+Note also that you must support arbitrary initial states in Forsyth-Edwards Notation [https://en.wikipedia.org/wiki/Forsyth-Edwards_Notation], so do not assume that when you start a game it will necessarily be in the default initial chess state.
 
-#################################
-#          !IMPORTANT!          #
-#################################
+Assignment Algorithm
+1 Legal random move.
 
-* Read the `README` in the sub-directory corresponding to your chosen language.  
+2 Iterative-Deepening
+Depth-Limited MiniMax
 
-* Read the chess framework's documentation for your chosen language here : http://docs.siggame.io/chess/ 
+3 Time-Limited
+Iterative-Deepening
+Depth-Limited MiniMax
+with Alpha-Beta Pruning.
 
-#################################
-#	Submission Rules	#
-#################################
-
-Included in the top level of your repository is a file named `readyToSubmit.txt`. When your program is ready to submit, change the first line of this file to the word `yes` or `Yes` and the second line to your chosen programming language. 
-You may commit and push as much as you want, but your submission will be graded unless the first line of `readyToSubmit.txt` is `yes`. If you do not plan to submit before the deadline, then you should NOT modify `readyToSubmit.txt` until your final submission is ready. Once your final submission is ready, change the first line of `readyToSubmit.txt` to `yes`.
-
-#################################
-#       Compiling & Running	#
-#################################
-
-You have been provided a bash script called `play.sh`, which compiles and runs your code; it also starts a game session between your AI and itself. DO NOT MODIFY THIS SCRIPT.
-You can run `play.sh` using the following command format :
-
-	./play.sh Joueur.<lang> Session_ID
-
-Where `Joueur.<lang>` is the directory for the language you are coding in. An example of the above command for c++ would be :
-
-	./play.sh Joueur.cpp AIisAwesome
+4 Time-Limited
+Iterative-Deepening
+Depth-Limited MiniMax
+with Alpha-Beta Pruning,
+Quiescent Search, and
+History Table
